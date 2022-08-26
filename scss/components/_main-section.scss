@@ -1,0 +1,42 @@
+.oportunity-section__column{
+
+    &:last-of-type{
+        position: relative;
+        &:after{
+            content: '';
+            position: absolute;
+            top:-50px;
+            right: -50px;
+            @include rem(width,130px);
+            @include rem(height,130px);
+            background-image: url("../images/frames/circle-after.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            z-index: 1000;
+        }
+
+        &:before{
+            content: '';
+            position: absolute;
+            bottom:-80px;
+            left: -50px;
+            @include rem(width,130px);
+            @include rem(height,130px);
+            background-image: url("../images/frames/frame.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            z-index: 1000;
+        }
+    }
+    img{
+        @include rem(width,458px);
+        @include rem(height,634px);
+    }
+}
+
+.about-main-section__body{
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+@include rem(width,585px);
+}

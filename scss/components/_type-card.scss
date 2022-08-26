@@ -1,0 +1,45 @@
+.type-card {
+    @include rem(padding-top, 40px);
+    @include rem(padding-bottom, 42px);
+    @include rem(padding-left, 32px);
+    @include rem(padding-right, 32px);
+    background-color: $grey;
+    @include rem(width, 387px);
+    @include rem(height, 317px);
+    @include rem(border-radius, 8px);
+    display: block;
+    @include rem(margin-top, 60px);
+
+    &__img {
+        @include rem(margin-bottom, 42px);
+        position: relative;
+        z-index: 1000;
+        display: inline-block;
+        .type-icon {
+            @include rem(width, 60px);
+            @include rem(height, 52px);
+        }
+
+        &:after{
+            content: '';
+            position: absolute;
+            z-index: -1;
+            @include rem(width, 57px);
+            @include rem(height, 58px);
+            background-image: url("../../images/frames/primary-dots.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            bottom: -9px;
+            right: -9px;
+        }
+    }
+
+    &__content {
+        .subtitle {
+            font-weight: 700;
+        }
+        .custom-text {
+            color: #556987;
+        }
+    }
+}
